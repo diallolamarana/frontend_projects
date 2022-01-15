@@ -1,3 +1,4 @@
+//Assigning veriables  
 const balance = document.getElementById('balance');
 const money_plus = document.getElementById('money-plus');
 const money_minus = document.getElementById('money-minus');
@@ -6,22 +7,23 @@ const form = document.getElementById('form');
 const text = document.getElementById('text');
 const amount = document.getElementById('amount');
 
+//This allows to create variabke to allow JavaScript sites and 
+//apps to save key-value pairs in a web browser with no expiration date
 const localStorageTransactions = JSON.parse(
     localStorage.getItem('transactions')
     );
-
     let transactions =
   localStorage.getItem('transactions') !== null ? localStorageTransactions : [];
 
 // Add transaction
 function addTransaction(e) {
   e.preventDefault();
-
+//This is to check if the user enters a text and the amount 
   if (text.value.trim() === '' || amount.value.trim() === '') {
     alert('Please add a text and amount');
   }
-
   else {
+      //this will print the amount after calulations
     const transaction = {
       id: generateID(),
       text: text.value,
@@ -40,7 +42,6 @@ function addTransaction(e) {
     amount.value = '';
   }
 }
-
 // Generate random ID
 function generateID() {
     return Math.floor(Math.random() * 100000000);
@@ -66,7 +67,6 @@ function generateID() {
   
     list.appendChild(item);
   }
-
   // Update the balance, income and expense
 function updateValues() {
     const amounts = transactions.map(transaction => transaction.amount);
@@ -87,7 +87,6 @@ function updateValues() {
     money_plus.innerText = `$${income}`;
     money_minus.innerText = `$${expense}`;
   }
-
   // Remove transaction by ID
 function removeTransaction(id) {
     transactions = transactions.filter(transaction => transaction.id !== id);
