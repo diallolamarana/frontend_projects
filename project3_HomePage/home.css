@@ -1,0 +1,81 @@
+body{
+    background-color:#FFE162 ;
+    margin: 0;
+    padding: 0;
+}
+.banner-are{
+  background-image: url("images/Home_page.jpeg");
+  background-size: cover;
+  background-position: center;
+  height: 450px;
+  padding-top: 0;
+
+}
+header{
+    padding: 15px 60px;
+}
+.menu{
+    padding-left: 0%;
+    width:50%;
+    float:right;
+    list-style: none;
+}
+.menu li{
+    width: 100px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #1C0C5B;
+    font-size: 17px;
+    float: right;
+
+}
+
+.menu li:hover{
+    background: yellowgreen;
+}
+
+.menu li:hover a{
+    color: #fff;
+}
+
+.menu li a{
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    color: #1C0C5B;
+    text-transform: uppercase;
+}
+.banner_page{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    color: #fff;
+    text-align: center;
+}
+.banner_page h1{
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0%;
+    font-size: 55px;
+    color: yellow;
+}
+
+.banner_page a{
+    text-decoration: none;
+    border: 1px solid #fff;
+    font-size: 20px;
+    padding: 10px 35px;
+    color: #fff;
+    display: inline-block;
+    margin-top: 5%;
+    font-family: poppins;
+    text-transform: uppercase;
+
+}
+.banner_page a:hover
+{
+    border-color: yellow;
+    background:yellow;
+    transition: .9s;
+    color: #262626;
+}
